@@ -8,7 +8,7 @@ class Greeter extends Component{
 	 	this.handleClick=this.handleClick.bind(this);
 	}
 	handleClick(e){
-		console.log('1');  	
+		console.log('hello');  	
 	}
 	render() {
 	   const value=this.state.value;
