@@ -7,4 +7,4 @@
 运行步骤：
 1. npm install   安装依赖包
 2. set DEBUG=erp & npm start  //运行项目
-3.打开 http://localhost:3000/
+3. 打开 http://localhost:3000/
