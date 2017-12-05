@@ -1,8 +1,8 @@
 # express-react
 服务端渲染React组件
-该项目只是实现了服务端渲染react组件到客户端，但渲染出来的组件没有响应事件。如你所见，本来渲染在客户端的button 在触发点击事件后会在控制台打印出 ‘hello’。但结果不是预想中的那样，客户端报错了 ‘react is not defined’。
-我的实现思路是这样的：服务端渲染react组件成字符串填充到ejs模板中，然后在ejs模板引用这个组件。这样的思路会有毛病吗？
-请各位指教，怎么在基于express+ejs 项目中实现服务端渲染React组件。这个思路具体是怎样的。
+该项目实现了服务端渲染react组件。点击按钮 在控制台输出 hello
+我的实现思路是这样的：服务端渲染react组件成字符串，然后填充到ejs模板中，客户端获得html页面后 还要render 一遍 react组件。既然客户端还要render 一遍组件 那么就得在客户端再引用一遍react组件文件。
+下一步学习目标是 node+express+ejs+react 配合 react-route 使用
 
 这是一个express项目。
 运行步骤：
