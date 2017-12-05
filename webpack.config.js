@@ -4,21 +4,16 @@ var commonLoaders = [
   { test: /\.png$/, loader: "url-loader" },
   { test: /\.jpg$/, loader: "file-loader" },
 ];
-var assetsPath = path.join(__dirname, "public", "assets");
-var publicPath = "assets/";
 module.exports = [
-    { name: "bw",
-    entry: "./server/Greeter.js",
-    target: "node",
+    {
+    entry: "./app/index.js",
     output: {
       path: __dirname+"/public",
-      filename: "Greeter.js",
-      publicPath: publicPath
+      filename: "index.js",
     },
-    externals: /^[a-z\-0-9]+$/,
     module: {
       loaders: commonLoaders.concat([
-        { test: /\.css$/,  loader: path.join(__dirname, "server", "style-collector") + "!css-loader" },
+        { test: /\.css$/,  loader: "css-loader" },
       ])
     }
   },
@@ -34,7 +29,7 @@ module.exports = [
     externals: /^[a-z\-0-9]+$/,
     module: {
       loaders: commonLoaders.concat([
-        { test: /\.css$/,  loader: path.join(__dirname, "server", "style-collector") + "!css-loader" },
+        { test: /\.css$/,  loader: "css-loader" },
       ])
     }
   }
