@@ -23,7 +23,6 @@ module.exports = [
     output: {
       path: __dirname,
       filename: "index.js",
-      publicPath: publicPath,
       libraryTarget: "commonjs2"
     },
     externals: /^[a-z\-0-9]+$/,
